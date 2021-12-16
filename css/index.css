@@ -1,0 +1,90 @@
+body {
+    /* 文字无法被选中 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#root {
+    background-image: -webkit-linear-gradient(bottom, rgb(4 52 4), rgb(68, 141, 31) 25%, rgb(4 52 4) 50%, rgb(68, 141, 31) 75%, rgb(4 52 4) 100%);
+    -webkit-background-clip: text;
+    text-align: center;
+    margin: 100px auto;
+    animation: myfirst 5s infinite linear;
+    animation-direction: alternate;
+    background-size: 100% 500%;
+}
+
+@keyframes myfirst {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+
+#titleA {
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    -webkit-text-fill-color: transparent;
+}
+
+#titleB {
+    font-family: 'Russo One', sans-serif;
+    font-size: 80px;
+    color: rgb(6, 70, 6);
+}
+
+#squareWrapper {
+    /* display: flex; */
+    position: relative;
+}
+
+#square {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    background-image: -webkit-linear-gradient(top, rgb(195, 250, 168), rgb(68, 141, 31) 25%, rgb(195, 250, 168), rgb(68, 141, 31) 75%, rgb(195, 250, 168) 100%);
+    animation: squarekey 5s infinite linear;
+    background-size: 100% 5000%;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+@keyframes squarekey {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+
+#squareWrapper>p {
+    /* font-family: 'Permanent Marker'; */
+    font-family: 'Russo One';
+    font-size: 15px;
+    color: white;
+    /* font-weight: bolder; */
+    text-align: center;
+    margin: 0px auto;
+    line-height: 50px;
+    position: relative;
+    top: -50px;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+#square:hover {
+    cursor: pointer;
+    transform: rotate(45deg);
+    transform: scale(1.2) rotate(45deg);
+    background-image: -webkit-linear-gradient(top, rgb(24, 73, 0), rgb(68, 141, 31) 25%, rgb(24, 73, 0), rgb(68, 141, 31) 75%, rgb(24, 73, 0) 100%);
+}
+
+#square:active {
+    transition: 0.1s;
+    transform: scale(1) rotate(45deg);
+}
