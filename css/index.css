@@ -11,12 +11,12 @@ body {
     -webkit-background-clip: text;
     text-align: center;
     margin: 100px auto;
-    animation: myfirst 5s infinite linear;
+    animation: rootkey 5s infinite linear;
     animation-direction: alternate;
     background-size: 100% 500%;
 }
 
-@keyframes myfirst {
+@keyframes rootkey {
     0% {
         background-position: 0 0;
     }
@@ -38,8 +38,21 @@ body {
 }
 
 #squareWrapper {
-    /* display: flex; */
     position: relative;
+}
+
+#squareWrapper>p {
+    /* font-family: 'Permanent Marker'; */
+    font-family: 'Russo One';
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 50px;
+    position: relative;
+    top: -50px;
+    transition: 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 #square {
@@ -60,21 +73,6 @@ body {
     100% {
         background-position: 0 -100%;
     }
-}
-
-#squareWrapper>p {
-    /* font-family: 'Permanent Marker'; */
-    font-family: 'Russo One';
-    font-size: 15px;
-    color: white;
-    /* font-weight: bolder; */
-    text-align: center;
-    margin: 0px auto;
-    line-height: 50px;
-    position: relative;
-    top: -50px;
-    transition: 0.3s ease-in-out;
-    pointer-events: none;
 }
 
 #square:hover {
